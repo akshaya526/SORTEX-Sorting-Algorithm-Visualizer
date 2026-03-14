@@ -41,10 +41,10 @@ Each algorithm highlights:
 Visualization of the sorting process:
 
 ### Before Sorting
-![Random Array](screenshot1.png)
+![Random Array](Screenshot1.png)
 
 ### After Sorting
-![Sorted Array](screenshot2.png)
+![Sorted Array](Screenshot2.png)
 
 
 ## Visualization Explanation
