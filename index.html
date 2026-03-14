@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SORTEX</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="app">
+
+  <header>
+    <div class="logo">
+      <div class="logo-icon">
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+      <h1>SORTEX</h1>
+    </div>
+
+    <div class="hdr-right">
+      <div class="comp-badge">
+        <span class="comp-label">Comparisons</span>
+        <span id="comp-count">0</span>
+      </div>
+      <div id="status">Ready</div>
+    </div>
+  </header>
+
+  <div class="main">
+
+    <aside class="panel">
+
+      <div>
+        <div class="sec-lbl">Algorithm</div>
+        <div class="sel-wrap">
+          <select id="algo-select">
+            <option value="bubble">Bubble Sort</option>
+            <option value="selection">Selection Sort</option>
+            <option value="insertion">Insertion Sort</option>
+            <option value="merge">Merge Sort</option>
+            <option value="quick">Quick Sort</option>
+          </select>
+          <span class="sel-arrow">▼</span>
+        </div>
+      </div>
+
+      <div>
+        <div class="sec-lbl">Controls</div>
+        <div class="btns">
+          <button class="btn btn-start" id="start-btn">▶ Start Sorting</button>
+          <button class="btn btn-stop" id="stop-btn" disabled>■ Stop</button>
+          <button class="btn btn-gen" id="generate-btn">⟳ New Array</button>
+        </div>
+      </div>
+
+      <div>
+        <div class="sec-lbl">Parameters</div>
+
+        <div class="sliders">
+
+          <div class="sld-block">
+            <div class="sld-row">
+              <span class="sld-name">Array Size</span>
+              <span class="sld-val" id="size-label">50</span>
+            </div>
+            <input type="range" id="size-slider" min="10" max="150" value="50">
+          </div>
+
+          <div class="sld-block">
+            <div class="sld-row">
+              <span class="sld-name">Speed</span>
+              <span class="sld-val" id="speed-label">Medium</span>
+            </div>
+            <input type="range" id="speed-slider" min="1" max="100" value="50">
+          </div>
+
+        </div>
+      </div>
+
+      <div>
+        <div class="sec-lbl">Complexity</div>
+
+        <div class="info-card">
+
+          <div class="algo-name" id="algo-title">—</div>
+
+          <div class="cplx-grid">
+
+            <div class="cplx-item">
+              <span class="cplx-key">Best</span>
+              <span class="cplx-val" id="best">—</span>
+            </div>
+
+            <div class="cplx-item">
+              <span class="cplx-key">Average</span>
+              <span class="cplx-val" id="avg">—</span>
+            </div>
+
+            <div class="cplx-item">
+              <span class="cplx-key">Worst</span>
+              <span class="cplx-val" id="worst">—</span>
+            </div>
+
+            <div class="cplx-item">
+              <span class="cplx-key">Space</span>
+              <span class="cplx-val sp" id="space">—</span>
+            </div>
+
+          </div>
+
+          <p class="algo-desc" id="algo-desc"></p>
+
+        </div>
+      </div>
+
+    </aside>
+
+    <section class="visualizer">
+
+      <div class="vis-top">
+        <span class="sec-lbl" style="border:0;padding:0;margin:0">Visualization</span>
+
+        <div class="legend">
+          <div class="legend-item"><div class="dot c"></div>Comparing</div>
+          <div class="legend-item"><div class="dot s"></div>Swapping</div>
+          <div class="legend-item"><div class="dot p"></div>Pivot</div>
+          <div class="legend-item"><div class="dot ok"></div>Sorted</div>
+        </div>
+      </div>
+
+      <div id="bars-container"></div>
+
+    </section>
+
+  </div>
+</div>
+
+<script src="main.js"></script>
+
+</body>
+</html>
